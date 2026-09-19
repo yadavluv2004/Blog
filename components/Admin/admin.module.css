@@ -1,0 +1,127 @@
+/* Shared layout primitives for the /admin control panel. Deliberately plain
+   and functional rather than "editorial" — this is a tool, not the site. */
+
+.shell {
+  min-height: 100dvh;
+  background: var(--surface);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.headerInner {
+  max-width: 880px;
+  margin-inline: auto;
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.brandTag {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.main {
+  max-width: 880px;
+  margin-inline: auto;
+  padding: var(--space-7) var(--space-5) var(--space-9);
+}
+
+.pageHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.sectionTitle {
+  margin-bottom: var(--space-4);
+}
+
+.loginWrap {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-5);
+  background: var(--surface);
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 360px;
+  padding: var(--space-7);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.loginTitle {
+  margin-bottom: var(--space-2);
+}
+
+.loginHint {
+  margin-bottom: var(--space-6);
+}
+
+.error {
+  font-size: 0.875rem;
+  color: #dc2626;
+  background: color-mix(in srgb, #dc2626 8%, transparent);
+  border: 1px solid color-mix(in srgb, #dc2626 25%, transparent);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+:root[data-theme="dark"] .error {
+  color: #f87171;
+}
+
+.field {
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.textInput {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-5);
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+}
+
+.submit {
+  width: 100%;
+}
+
+.danger {
+  color: #dc2626;
+}
+
+:root[data-theme="dark"] .danger {
+  color: #f87171;
+}

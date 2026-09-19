@@ -1,0 +1,30 @@
+.toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  color: var(--fg);
+  transition: background-color var(--duration) var(--ease);
+}
+
+.toggle:hover {
+  background: var(--surface);
+}
+
+.sun,
+.moon {
+  grid-area: 1 / 1;
+}
+
+.moon {
+  display: none;
+}
+
+:root[data-theme="dark"] .sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .moon {
+  display: block;
+}

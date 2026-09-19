@@ -1,0 +1,18 @@
+.sectionHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+  gap: var(--space-4);
+}
+
+.viewAll {
+  font-size: 0.9375rem;
+  color: var(--accent);
+  white-space: nowrap;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.viewAll:hover {
+  opacity: 0.75;
+}

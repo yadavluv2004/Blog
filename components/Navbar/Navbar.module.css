@@ -1,0 +1,80 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.center {
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .center {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.link {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  transition: color var(--duration) var(--ease);
+}
+
+.link:hover {
+  color: var(--fg);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.contact {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .contact {
+    display: inline-flex;
+    align-items: center;
+    margin-left: var(--space-2);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: var(--accent);
+    color: var(--accent-fg);
+    transition: background-color var(--duration) var(--ease);
+  }
+
+  .contact:hover {
+    background: color-mix(in srgb, var(--accent) 88%, black);
+  }
+}

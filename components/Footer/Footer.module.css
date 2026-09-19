@@ -1,0 +1,47 @@
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: var(--space-9);
+  padding-block: var(--space-7);
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .top {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.links,
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+}
+
+.link {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  transition: color var(--duration) var(--ease);
+}
+
+.link:hover {
+  color: var(--fg);
+}
+
+.copyright {
+  margin-top: var(--space-6);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}

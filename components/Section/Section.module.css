@@ -1,0 +1,13 @@
+.section {
+  padding-block: var(--space-8);
+}
+
+.border {
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--space-9);
+  }
+}
